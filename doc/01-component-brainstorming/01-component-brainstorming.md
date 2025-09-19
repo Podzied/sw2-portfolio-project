@@ -1,12 +1,12 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Ayush Saggar
+- **Dot Number**: saggar.9
+- **Due Date**: 9/19/2025 - 1:50PM
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
+
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +29,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +102,10 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I started programming when I was in 8th grade. I've always loved webscraping and automation. I love creating tooling. Some hobbies outside of my "nerd" stuff, well sorta...I like cars, building computers, minecraft, tennis, and listening to music. Thats where I sorta got the idea to build the playlist maker.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +113,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +122,6 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -223,6 +212,61 @@ will likely refine your design to make your implementation easier to use.
     - Can you implement your secondary methods using your kernel methods?
       - Yes to move a song you can remove it and then add it back at the new position
 
+- Component Design #2: Weather Tracker
+  - **Description**:
+    - a component to track weather data, i.e. temperature and precipitation over time
+  - **Kernel Methods**:
+    - `void recordWeather(Date date, double temp, double precipitation)`: record weather data for a specific date
+    - `WeatherData getWeatherData(Date date)`: get weather data for a specific date
+    - `void removeWeatherData(Date date)`: remove weather data for a date
+    - `int size()`: get the number of recorded weather entries
+  - **Secondary Methods**:
+    - `double getAverageTemperature()`: calculate average temperature across all records
+    - `double getTotalPrecipitation()`: calculate total precipitation across all records
+    - `WeatherData getHottestDay()`: find the day with highest temperature
+    - `List<WeatherData> getWeatherInRange(Date start, Date end)`: get all weather data within a date range
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - yes because you can add new weather records and remove existing ones
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - simple WeatherData class to store temperature and precipitation info
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - maybe constants for temperature units like Fahrenheit or Celsius
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - Yes to get average temperature you can use getWeatherData to get all records and calculate the average
+
+- Component Design #3: Color Conversion
+  - **Description**:
+    - a utility for converting between different color formats, i.e. RGB and HSV
+  - **Kernel Methods**:
+    - `HSV rgbToHsv(RGB rgb)`: convert RGB color to HSV format
+    - `RGB hsvToRgb(HSV hsv)`: convert HSV color to RGB format
+    - `boolean isValidRgb(RGB rgb)`: check if RGB values are valid
+    - `boolean isValidHsv(HSV hsv)`: check if HSV values are valid
+  - **Secondary Methods**:
+    - `String rgbToHex(RGB rgb)`: convert RGB to hexadecimal string
+    - `RGB hexToRgb(String hex)`: convert hexadecimal string to RGB
+    - `RGB adjustBrightness(RGB rgb, double factor)`: adjust color brightness
+    - `HSV adjustSaturation(HSV hsv, double factor)`: adjust color saturation
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - yes because it inherits from Standard which requires mutable methods
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - simple RGB and HSV classes to store color values
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - constants for color value ranges like max RGB value of 255
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - Yes to convert RGB to hex you can use isValidRgb to check the input first
+
+
 ## Post-Assignment
 
 The following sections detail everything that you should do once you've
@@ -230,7 +274,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -269,8 +312,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -283,7 +324,6 @@ you have to submit any PDFs.
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
