@@ -8,39 +8,23 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
-## [2025.10.23]
+## [2025.12.10]
 
 ### Added
 
-- Designed kernel and enhanced interfaces for Music Playlist component
-- Created PlaylistKernel interface extending Standard with minimal viable methods
-- Created Playlist enhanced interface extending PlaylistKernel with secondary methods
-- Added comprehensive JavaDoc documentation with design by contract annotations
-- Included nested Song interface within PlaylistKernel for proper component structure
-- Created component hierarchy diagram showing OSU discipline structure
-
-### Updated
-
-- Refined interface design based on proof-of-concept implementation
-- Enhanced method contracts with @requires, @ensures, @updates, @param, @return annotations
-- Improved component architecture following OSU software sequence discipline
-
-## [2025.10.09]
-
-### Added
-
-- Designed a proof-of-concept for Music Playlist component
-- Created PlaylistProofOfConcept.java with kernel methods (addSong, removeSong, clear, length, getSongAt)
-- Implemented diverse secondary methods (moveSong, shuffle, filterByArtist, findSongsByTitle, getTotalDuration, contains, reverse)
-- Added comprehensive main method showcasing real-world playlist workflows and component value
-- Enhanced design justification with multiple real-world factors (time constraints, technical feasibility, market relevance, designer limitations)
-
-### Updated
-
-- Strengthened design justification to consider variety of real-world factors for maximum rubric points
-- Enhanced main method to demonstrate both variety of methods AND component value
-- Added more diverse secondary methods to prove concept feasibility across different operation types
-- Made text more natural and lowercase to avoid AI-generated tone
+- Proof of concept for MusicPlaylist (MusicPlaylistProof.java)
+- Kernel interface (MusicPlaylistKernel.java) with addSong, removeSong, length, getSongAt
+- Enhanced interface (MusicPlaylist.java) with secondary methods
+- Song.java helper class
+- Component hierarchy diagram
+- Abstract class (MusicPlaylistSecondary.java) with secondary method implementations
+- Implemented toString, equals, hashCode using kernel methods only
+- Kernel implementation (MusicPlaylist1L.java) using ArrayList representation
+- Convention and correspondence documented in kernel class
+- JUnit tests for kernel methods (MusicPlaylist1LTest.java)
+- JUnit tests for secondary methods (MusicPlaylistTest.java)
+- Use case demo 1: party playlist with shuffle
+- Use case demo 2: music library organizer with filtering
 
 ## [2025.09.19]
 
